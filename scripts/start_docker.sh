@@ -1,6 +1,6 @@
 #!/bin/sh
 
-docker-compose down
-docker rmi server_node
+docker rmi ndi_server_node
 
-sudo docker-compose up server_node
+docker-compose --project-name ndi build server_node
+docker-compose --project-name ndi run --rm --service-ports server_node

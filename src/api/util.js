@@ -7,7 +7,7 @@ var utilRouter = Router();
 
 utilRouter.get('/test', (req, res) => {
     test().then(result => {
-        res.send('test');
+        res.send(result);
     });
 });
 
